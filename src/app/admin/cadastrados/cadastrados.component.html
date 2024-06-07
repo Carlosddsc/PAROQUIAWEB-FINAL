@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>
+    Lista <span class="subtitulo">de Cadastros</span>
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome Completo</th>
+        <th>Email</th>
+        <th>Idade</th>
+        <th>Paróquia</th>
+        <th>Servo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.nomeCompleto }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.idade }}</td>
+        <td>{{ usuario.paroquia }}</td>
+        <td>{{ usuario.servo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="back-button" (click)="goToAdminHome()">Voltar para Home</button>
